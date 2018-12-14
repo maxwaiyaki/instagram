@@ -50,7 +50,7 @@ Click on the any of the buttons to get instructions on how to install the techno
 - [x] [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
 - [x] [![Pip](https://img.shields.io/badge/pypi-v18.1-blue.svg)](https://pypi.org/project/pip/)
 - [x] [![Virtualenv](https://img.shields.io/badge/virtualenv-16.1.0-brightgreen.svg)](https://virtualenv.pypa.io/en/latest/installation/)
-- [x] [![Flask](https://img.shields.io/badge/flask-1.0.2-lightgrey.svg)](http://flask.pocoo.org/)
+- [![Django](https://img.shields.io/badge/django-1.11-blue.svg)](https://www.djangoproject.com/)
 - [x] [![PostgreSQL](https://img.shields.io/badge/postgreSQL-11.1-darkblue.svg)](https://www.postgresql.org/)
 
 ### Installation ⬇️
