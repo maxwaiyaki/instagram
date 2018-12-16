@@ -28,4 +28,29 @@ class Profile(models.Model):
 
 
 class Image(models.Model):
-    
+    image = models.ImageField(upload_to = 'images/')
+    image_name = models.CharField(max_length = 30)
+    image_caption = models.TextField()
+    user = models.ForeignKey(User,on_delete=models.CASCADE,null=True)
+    profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
+    likes = models.ManyToManyField(User, blank=True,related_name='post_likes')
+    upload_date = models.DateTimeField(auto_now_add=True,null=True) 
+
+    def __str__(self):
+        return self.image_name
+
+    @classmethod
+    def save_image(self):
+        self.save()
+
+    def get_image(cls):
+        images = cls.objects.all().order_by('-upload_date')
+        return images
+
+    def delete_image(self):
+        self.delete()
+
+    def update_caption(self, caption):
+        self.image_caption = caption
+        self.save()
+        
