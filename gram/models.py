@@ -19,7 +19,7 @@ class Profile(models.Model):
         self.delete()
 
     def __str__(self):
-        return self.user
+        return str(self.user)
 
     @classmethod
     def search_user(cls, username):
@@ -40,12 +40,12 @@ class Image(models.Model):
         return self.image_name
 
     @classmethod
-    def save_image(self):
-        self.save()
-
-    def get_image(cls):
+    def get_images(cls):
         images = cls.objects.all().order_by('-upload_date')
         return images
+
+    def save_image(self):
+        self.save()
 
     def delete_image(self):
         self.delete()
